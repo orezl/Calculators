@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="220.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="calculator.FXMLDocumentController">
+   <children>
+      <Region prefHeight="20.0" prefWidth="400.0" AnchorPane.topAnchor="0.0" />
+      <TextField fx:id="op" layoutY="20.0" prefHeight="40.0" prefWidth="360.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0" />
+      <HBox layoutX="20.0" layoutY="60.0" spacing="15.0" AnchorPane.leftAnchor="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="7">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="8">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="9">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="/">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="^">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="30.0" layoutY="70.0" spacing="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="4">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="5">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="6">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="*">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="^0.5">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="30.0" layoutY="70.0" spacing="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="1">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="2">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="3">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="-">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="1/x">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="40.0" layoutY="80.0" spacing="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="135.0" text="0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text=".">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="+">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="\%">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="40.0" layoutY="80.0" spacing="15.0" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="182.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="&lt;-">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="C">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="+-">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="20.0" prefWidth="60.0" text="=">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="176.0" prefHeight="40.0" prefWidth="75.0" text="CALCY BABA" textFill="#e12929" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
