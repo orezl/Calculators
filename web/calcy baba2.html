@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calcy Baba</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- W3CSS             Latest compiled and minified W3CSS -->
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<!-- Bootstrap                      Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--  Foundation                             Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.css">
+<!-- jQuery library -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+<!-- Latest compiled modernizr -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+<!-- Icons                     -->      
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>.material-icons{vertical-align:-30%}
+.w3-btn{width: 85px;margin:2px}
+</style>
+
+<script type="text/javascript">
+function dispnum(n1){var n=1,i,a=0,b,c,ans=0;
+  switch(n1)
+  {case 'X!':{
+              a=eval(calcy.txt.value);
+              for(i=1;i<=a;i++)n*=i;
+              calcy.txt.value=n;n1='';
+          ans=calcy.txt.value;break; }
+    case 'C':{calcy.txt.value='';n1='';ans=calcy.txt.value;break;}
+    case '|X|':{a=calcy.txt.value; if(a<0){a*=(-1); calcy.txt.value=a;}
+                 else
+                  {calcy.txt.value*=1;}n1='';
+                ans=calcy.txt.value;break;}
+    case 'π': {n1=22/7;
+      if(calcy.txt.value==0){calcy.txt.value+=n1;n1='';ans=calcy.txt.value;break;}
+       else
+        {calcy.txt.value*=3.142857142857143;
+          calcy.txt.value=eval(calcy.txt.value);n1='';calcy.txt.value;ans=calcy.txt.value;break;}}
+    case '1/X': {a=calcy.txt.value; calcy.txt.value=(1/a);n1='';ans=calcy.txt.value;break; }
+    case 'e':{n1=2.71828182846;calcy.txt.value+=n1;n1='';ans=calcy.txt.value;break;}
+    case 'T+273':{a=calcy.txt.value; calcy.txt.value=a+'+273';calcy.txt.value=eval(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case 'Sin':{calcy.txt.value=Math.sin(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case 'Tan':{calcy.txt.value=Math.tan(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case 'Cos':{calcy.txt.value=Math.cos(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case 'aSin':{calcy.txt.value=Math.asin(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case 'aTan':{calcy.txt.value=Math.atan(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case 'aCos':{calcy.txt.value=Math.acos(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case '√':{calcy.txt.value=Math.sqrt(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case 'log':{calcy.txt.value=Math.log10(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+    case '^':{i=calcy.txt.value;
+             n=i.indexOf(","); 
+             a=i.slice(0,n);
+             c=i.length;b=i.slice(n+1,c);b=eval(b);
+              calcy.txt.value=Math.pow(a,b);n1='';ans=calcy.txt.value;break;}
+    case 'ln':{calcy.txt.value=Math.log(calcy.txt.value);n1='';ans=calcy.txt.value;break;}
+  default:/*{a=calcy.txt.value;
+  if ((a.indexOf("Sin")!=-1)||(a.indexOf("Cos")!=-1)||(a.indexOf("Tan")!=-1)||(a.indexOf("log")!=-1)||(a.indexOf("ln")!=-1)||(a.indexOf("^")!=-1)||(a.indexOf("√")!=-1)) 
+    { if (a.indexOf("Sin")!=-1) {n=a.indexOf("Sin");b=a.slice(-n);
+                                 calcy.txt.value=Math.sin(b);n1=''; ans=calcy.txt.value;break;}   
+
+
+   }
+  
+  }
+  }*/
+  if(ans==0)
+      calcy.txt.value+=n1;}}
+</script>
+
+</head>
+<body style='padding:1% ; background:black'>
+  
+  <header class="w3-container w3-teal" style='padding-top:1%;border-radius:2%'>
+  <h1><b><i>C</i>alcy Baba</b></h1>
+</header>
+
+
+
+<div class='w3-container' style='margin:auto;padding:2%'>
+<div class="w3-row" >
+  <div class="w3-container w3-quarter">.col-sm-4</div>
+
+  <div class="w3-container w3-half">
+     <div class='w3-card-4 w3-black' style='border:1px solid #33FF33'>
+      <header class="w3-container w3-blue">
+         <h3>Scientific Calculator</h3>
+      </header> <br><br>
+      <form class='w3-container' name='calcy'>
+        <input class="w3-input" type="text" placeholder="0" style='text-align:right' name='txt'>
+       
+        <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" type='button' value="9" name='btn9' onclick='dispnum(btn9.value)'>
+         <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" type='button' value="8" name='btn8' onclick='dispnum(btn8.value)'>
+          <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="7" type='button' name='btn7' onclick='dispnum(btn7.value)'>
+           <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="+" type='button'  name='btnadd' onclick='dispnum(btnadd.value)'>
+            <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="-"  type='button' name='btnsub'  onclick='dispnum(btnsub.value)'>
+             <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="="  name='btneql' type='button'  onclick='txt.value= eval(txt.value)'>
+              <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="6" name='btn6' type='button'  onclick='dispnum(btn6.value)'>
+               <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="5" type='button'  name='btn5' onclick='dispnum(btn5.value)'>
+                <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="4" name='btn4'  type='button' onclick='dispnum(btn4.value)'>
+                 <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="/" name='btndiv' type='button'  onclick='dispnum(btndiv.value)'>
+                  <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="*" name='btnmul' type='button'  onclick='dispnum(btnmul.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="." name='btnpt' type='button'  onclick='dispnum(btnpt.value)'>
+                    <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="3" name='btn3'  type='button' onclick='dispnum(btn3.value)'>
+                     <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="2" name='btn2'  type='button' onclick='dispnum(btn2.value)'>
+                      <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="1" name='btn1' type='button'  onclick='dispnum(btn1.value)'>
+                       <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="log" type='button'  name='btnlog' onclick='dispnum(btnlog.value)'>
+                       <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="^" name='btnpow' type='button'  onclick='dispnum(btnpow.value)'>
+                       <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="√" name='btnsqrt'  type='button' onclick='dispnum(btnsqrt.value)'>
+                        <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="(" name='btnrgbr' type='button'  onclick='dispnum(btnrgbr.value)'>
+               <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value=")" name='btnlfbr' type='button'  onclick='dispnum(btnlfbr.value)'>
+                <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="0" name='btn0' type='button'  onclick='dispnum(btn0.value)'>
+                 <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="X!" name='btnfact'  type='button' onclick='dispnum(btnfact.value)'>
+                  <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="1/X" name='btnrev' type='button'  onclick='dispnum(btnrev.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="e" name='btnexp' type='button'  onclick='dispnum(btnexp.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="ln" name='btnln' type='button'  onclick='dispnum(btnln.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="|X|" name='btnmodx' type='button'  onclick='dispnum(btnmodx.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="π" name='btnpi' type='button'  onclick='dispnum(btnpi.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-slim  w3-xlarge" value="T+273" name='btnkelv' type='button'  onclick='dispnum(btnkelv.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="%" name='btnmod' type='button'  onclick='dispnum(btnmod.value)'>
+                   <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="C" name='btnclr' type='button'  onclick='dispnum(btnclr.value)'>
+                    <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="Sin" name='btnsin' type='button'  onclick='dispnum(btnsin.value)'>
+                     <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="Cos" name='btncos' type='button'  onclick='dispnum(btncos.value)'>
+                      <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="Tan" name='btntan'  type='button' onclick='dispnum(btntan.value)'>
+                       <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="aSin" name='btnasin'  type='button' onclick='dispnum(btnasin.value)'>
+                       <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="aCos" name='btnacos' type='button'  onclick='dispnum(btnacos.value)'>
+                       <input class="w3-btn w3-round w3-indigo w3-wide  w3-xlarge" value="aTan" name='btnatan' type='button'  onclick='dispnum(btnatan.value)'>
+            </form>           
+      </div>
+
+
+
+  </div>
+
+
+  <p>w3-card-24</p></div></div>
+</div>
+</div>
+<footer class="container-fluid bg-4 text-center  " >
+  <p style='color:white'>Calcy Baba &copy;  By <span style='color:blue' >GARMK</span></p> 
+</footer>
+
+</body>
+</html>
